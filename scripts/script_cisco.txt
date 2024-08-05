@@ -1,0 +1,9 @@
+config t
+ip scp server enable
+crypto key generate rsa
+ip domain-name cisco.com
+line vty 0 4
+transport input ssh
+username cisco privilege 15 secret cisco
+end
+write memory
